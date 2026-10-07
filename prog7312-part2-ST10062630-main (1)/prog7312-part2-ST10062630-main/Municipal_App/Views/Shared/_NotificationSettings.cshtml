@@ -1,0 +1,220 @@
+﻿<!-- Notification Settings Modal -->
+<div class="modal fade" id="notificationSettingsModal" tabindex="-1" aria-labelledby="notificationSettingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="notificationSettingsModalLabel">
+                    <i class="fas fa-cog me-2"></i>
+                    Notification Settings
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-bell me-2 text-primary"></i>
+                        Push Notifications
+                    </h6>
+
+                    <div class="alert alert-info" id="notificationStatus">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <span id="notificationStatusText">Checking notification status...</span>
+                    </div>
+
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="enablePushNotifications">
+                        <label class="form-check-label" for="enablePushNotifications">
+                            Enable push notifications
+                        </label>
+                    </div>
+
+                    <small class="text-muted">
+                        Receive instant notifications about issue updates, service alerts, and important announcements.
+                    </small>
+                </div>
+
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-filter me-2 text-primary"></i>
+                        Notification Types
+                    </h6>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="issueUpdates" checked>
+                        <label class="form-check-label" for="issueUpdates">
+                            Issue status updates
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="serviceAlerts" checked>
+                        <label class="form-check-label" for="serviceAlerts">
+                            Service alerts and announcements
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="systemNotifications" checked>
+                        <label class="form-check-label" for="systemNotifications">
+                            System notifications
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="reminderNotifications">
+                        <label class="form-check-label" for="reminderNotifications">
+                            Reminder notifications
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-clock me-2 text-primary"></i>
+                        Notification Frequency
+                    </h6>
+
+                    <select class="form-select" id="notificationFrequency">
+                        <option value="instant">Instant (recommended)</option>
+                        <option value="hourly">Hourly digest</option>
+                        <option value="daily">Daily digest</option>
+                        <option value="weekly">Weekly digest</option>
+                    </select>
+
+                    <small class="text-muted mt-2 d-block">
+                        Choose how often you want to receive notifications.
+                    </small>
+                </div>
+
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Note:</strong> Critical notifications (like emergency alerts) will always be sent immediately regardless of your frequency settings.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-primary" id="saveNotificationSettings">
+                    <i class="fas fa-save me-1"></i>
+                    Save Settings
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('notificationSettingsModal');
+        const enablePushCheckbox = document.getElementById('enablePushNotifications');
+        const saveButton = document.getElementById('saveNotificationSettings');
+        const statusAlert = document.getElementById('notificationStatus');
+        const statusText = document.getElementById('notificationStatusText');
+
+        // Check notification permission status
+        function updateNotificationStatus() {
+            if (!('Notification' in window)) {
+                statusAlert.className = 'alert alert-danger';
+                statusText.textContent = 'Push notifications are not supported in this browser.';
+                enablePushCheckbox.disabled = true;
+                return;
+            }
+
+            const permission = Notification.permission;
+            switch (permission) {
+                case 'granted':
+                    statusAlert.className = 'alert alert-success';
+                    statusText.textContent = 'Push notifications are enabled and working.';
+                    enablePushCheckbox.checked = true;
+                    break;
+                case 'denied':
+                    statusAlert.className = 'alert alert-danger';
+                    statusText.textContent = 'Push notifications are blocked. Please enable them in your browser settings.';
+                    enablePushCheckbox.checked = false;
+                    enablePushCheckbox.disabled = true;
+                    break;
+                default:
+                    statusAlert.className = 'alert alert-warning';
+                    statusText.textContent = 'Push notifications are not enabled. Click the checkbox to enable them.';
+                    enablePushCheckbox.checked = false;
+                    break;
+            }
+        }
+
+        // Handle enable/disable push notifications
+        enablePushCheckbox.addEventListener('change', async function() {
+            if (this.checked) {
+                if (window.notificationManager) {
+                    const success = await window.notificationManager.requestPermission();
+                    if (!success) {
+                        this.checked = false;
+                    }
+                }
+            }
+            updateNotificationStatus();
+        });
+
+        // Save settings
+        saveButton.addEventListener('click', function() {
+            // Here you would typically save the settings to the server
+            const settings = {
+                pushEnabled: enablePushCheckbox.checked,
+                issueUpdates: document.getElementById('issueUpdates').checked,
+                serviceAlerts: document.getElementById('serviceAlerts').checked,
+                systemNotifications: document.getElementById('systemNotifications').checked,
+                reminderNotifications: document.getElementById('reminderNotifications').checked,
+                frequency: document.getElementById('notificationFrequency').value
+            };
+
+            // Save to localStorage for now (in a real app, save to server)
+            localStorage.setItem('notificationSettings', JSON.stringify(settings));
+
+            // Show success message
+            const toast = document.createElement('div');
+            toast.className = 'toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0 m-3';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <i class="fas fa-check me-2"></i>
+                        Notification settings saved successfully!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+
+            // Remove toast after it's hidden
+            toast.addEventListener('hidden.bs.toast', () => {
+                document.body.removeChild(toast);
+            });
+
+            // Close modal
+            const bsModal = bootstrap.Modal.getInstance(modal);
+            bsModal.hide();
+        });
+
+        // Update status when modal is shown
+        modal.addEventListener('shown.bs.modal', updateNotificationStatus);
+
+        // Load saved settings
+        const savedSettings = localStorage.getItem('notificationSettings');
+        if (savedSettings) {
+            try {
+                const settings = JSON.parse(savedSettings);
+                document.getElementById('issueUpdates').checked = settings.issueUpdates !== false;
+                document.getElementById('serviceAlerts').checked = settings.serviceAlerts !== false;
+                document.getElementById('systemNotifications').checked = settings.systemNotifications !== false;
+                document.getElementById('reminderNotifications').checked = settings.reminderNotifications || false;
+                document.getElementById('notificationFrequency').value = settings.frequency || 'instant';
+            } catch (e) {
+                console.error('Error loading notification settings:', e);
+            }
+        }
+    });
+</script>

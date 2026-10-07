@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Dependency Graph";
+    var graph = ViewBag.Graph as Dictionary<int, List<int>>;
+    var hasCycles = (bool)ViewBag.HasCycles;
+    var allRequests = ViewBag.AllRequests as List<Municipal_App.Models.Issue>;
+}
+
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold text-success">
+                <i class="fas fa-sitemap me-3"></i>Dependency Graph
+            </h1>
+            <p class="lead text-muted">Visual representation of service request relationships and dependencies</p>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">Total Nodes</h6>
+                    <h2 class="fw-bold">@(graph?.Count ?? 0)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">Total Edges</h6>
+                    <h2 class="fw-bold">@(graph?.Sum(kvp => kvp.Value.Count) ?? 0)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">Has Cycles</h6>
+                    <h2 class="fw-bold text-@(hasCycles ? "danger" : "success")">
+                        @(hasCycles ? "Yes" : "No")
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="alert alert-success">
+                <h5><i class="fas fa-info-circle me-2"></i>About Graph Traversal</h5>
+                <p class="mb-0">
+                    The graph represents relationships between service requests based on category, location, and timing.
+                    BFS (Breadth-First Search) finds related requests, while DFS (Depth-First Search) identifies dependency chains.
+                </p>
+            </div>
+
+            <h5 class="mt-4 mb-3">Adjacency List Representation</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Location</th>
+                            <th>Related Requests (Edges)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (graph != null)
+                        {
+                            foreach (var kvp in graph.OrderBy(x => x.Key))
+                            {
+                                var request = allRequests?.FirstOrDefault(r => r.Id == kvp.Key);
+                                <tr>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@kvp.Key" class="fw-bold">
+                                            #@kvp.Key
+                                        </a>
+                                    </td>
+                                    <td>@(request?.Location ?? "N/A")</td>
+                                    <td>
+                                        @if (kvp.Value.Any())
+                                        {
+                                            foreach (var relatedId in kvp.Value)
+                                            {
+                                                <a asp-action="Details" asp-route-id="@relatedId"
+                                                   class="badge bg-primary me-1">#@relatedId</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">No dependencies</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

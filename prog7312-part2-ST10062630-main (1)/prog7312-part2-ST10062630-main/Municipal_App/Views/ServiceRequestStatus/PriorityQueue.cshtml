@@ -1,0 +1,82 @@
+﻿@model List<Municipal_App.Models.Issue>
+@{
+    ViewData["Title"] = "Priority Queue";
+}
+
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold text-primary">
+                <i class="fas fa-sort-amount-down me-3"></i>Priority Queue (Min-Heap)
+            </h1>
+            <p class="lead text-muted">Service requests ordered by priority using Min-Heap data structure</p>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="alert alert-info">
+                <h5><i class="fas fa-info-circle me-2"></i>About Min-Heap</h5>
+                <p class="mb-0">
+                    The Min-Heap ensures O(1) access to the highest priority request and O(log n) insertion/deletion.
+                    Requests are prioritized based on urgency, days open, and status. Lower priority scores appear first.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Request ID</th>
+                            <th>Location</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Days Open</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var request = Model[i];
+                            <tr>
+                                <td>
+                                    @if (i == 0)
+                                    {
+                                        <span class="badge bg-danger">1st</span>
+                                    }
+                                    else if (i == 1)
+                                    {
+                                        <span class="badge bg-warning">2nd</span>
+                                    }
+                                    else if (i == 2)
+                                    {
+                                        <span class="badge bg-success">3rd</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@(i + 1)th</span>
+                                    }
+                                </td>
+                                <td><strong>#@request.Id</strong></td>
+                                <td>@request.Location</td>
+                                <td><span class="badge bg-@(request.Priority == "Critical" ? "danger" : request.Priority == "High" ? "warning" : "info")">@request.Priority</span></td>
+                                <td><span class="badge bg-@(request.Status == "Resolved" ? "success" : "warning")">@request.Status</span></td>
+                                <td>@request.DaysOpen days</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@request.Id" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-eye me-1"></i>View
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\optimalclusters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\optimalclusters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\priorityqueue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\priorityqueue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\dependancygraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\dependancygraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\datastructures.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\datastructures.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\servicerequeststatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\servicerequeststatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\databasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\databasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\redblacktree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\redblacktree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\minimumspanningtree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\minimumspanningtree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\minheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\minheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\binarysearchtree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\binarysearchtree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\datastructures\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\datastructures\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\servicerequeststatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\servicerequeststatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\servicerequeststatus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\servicerequeststatus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\issuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\issuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\_issuecardspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\_issuecardspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\issuelog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\issuelog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\reportissueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\reportissueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\ieventrecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\ieventrecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\ieventdatastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\ieventdatastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\idatabasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\idatabasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\eventrecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\eventrecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\eventdatastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\eventdatastructureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\updateissuestatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\updateissuestatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\issuelogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\issuelogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\localeventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\localeventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\ilocaleventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\ilocaleventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\usersearchpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\usersearchpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\pushsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\pushsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\localevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\localevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\eventrecommendation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\eventrecommendation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\databaseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\databaseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\models\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\models\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\iservicerequeststatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\iservicerequeststatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\trackissue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\trackissue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\reportsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\reportsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\issues\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\issues\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\views\\database\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\views\\database\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\pushsubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\pushsubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\issueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\issueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\ipushsubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\ipushsubscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\services\\iissueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\services\\iissueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\data\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\data\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\data\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\data\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|c:\\users\\lab_services_student\\source\\repos\\prog7312-part3-st10062630\\prog7312-part3-st10062630\\municipal_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{964E1738-B013-40C9-BC78-82A625EEADA1}|Municipal_App\\Municipal_App.csproj|solutionrelative:municipal_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceRequestStatusService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\ServiceRequestStatusService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\ServiceRequestStatusService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\ServiceRequestStatusService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\ServiceRequestStatusService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwHYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:38:16.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataStructures.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\DataStructures.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\DataStructures.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\DataStructures.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\DataStructures.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:41:24.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependancyGraph.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\DependancyGraph.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\DependancyGraph.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\DependancyGraph.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\DependancyGraph.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:42:01.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\Details.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\Details.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\Details.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\Details.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAIwNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:42:31.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PriorityQueue.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\PriorityQueue.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\PriorityQueue.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\PriorityQueue.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\PriorityQueue.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:44:21.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OptimalClusters.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\OptimalClusters.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\OptimalClusters.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\OptimalClusters.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\OptimalClusters.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:43:31.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceRequestGraph.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\ServiceRequestGraph.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\ServiceRequestGraph.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\ServiceRequestGraph.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\ServiceRequestGraph.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:34:58.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DatabaseManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DatabaseManagementService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DatabaseManagementService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DatabaseManagementService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DatabaseManagementService.cs",
+              "ViewState": "AgIAAEABAAAAAAAAAAAQwFwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:26:45.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RedBlackTree.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\RedBlackTree.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\RedBlackTree.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\RedBlackTree.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\RedBlackTree.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:34:07.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MinimumSpanningTree.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\MinimumSpanningTree.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\MinimumSpanningTree.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\MinimumSpanningTree.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\MinimumSpanningTree.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAowH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:33:40.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MinHeap.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\MinHeap.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\MinHeap.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\MinHeap.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\MinHeap.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:33:06.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BinarySearchTree.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\BinarySearchTree.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\BinarySearchTree.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\BinarySearchTree.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\BinarySearchTree.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:32:36.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AVLTree.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\AVLTree.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\DataStructures\\AVLTree.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\DataStructures\\AVLTree.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\DataStructures\\AVLTree.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:32:03.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ServiceRequestGraph.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ServiceRequestGraph.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\ServiceRequestGraph.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ServiceRequestGraph.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\ServiceRequestGraph.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAzwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:48:58.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ServiceRequest.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\ServiceRequest.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ServiceRequest.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\ServiceRequest.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:31:00.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceRequestStatusController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\ServiceRequestStatusController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\ServiceRequestStatusController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\ServiceRequestStatusController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\ServiceRequestStatusController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:29:12.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Program.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Program.cs",
+              "RelativeToolTip": "Municipal_App\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T10:07:13.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\Index.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\ServiceRequestStatus\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\ServiceRequestStatus\\Index.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\ServiceRequestStatus\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:42:54.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_IssueCardsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\_IssueCardsPartial.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\_IssueCardsPartial.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\_IssueCardsPartial.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\_IssueCardsPartial.cshtml",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAIwL8AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T10:52:42.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IssuesController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\IssuesController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\IssuesController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\IssuesController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\IssuesController.cs",
+              "ViewState": "AgIAAKgBAAAAAAAAAAAUwKMCAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:35:47.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\Edit.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\Edit.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAIwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T10:52:13.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IssueLog.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\IssueLog.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\IssueLog.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\IssueLog.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\IssueLog.cshtml",
+              "ViewState": "AgIAADYBAAAAAAAAAAAIwFIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T10:52:29.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\Notification.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\Notification.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T10:03:11.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ReportIssueViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ReportIssueViewModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\ReportIssueViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ReportIssueViewModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\ReportIssueViewModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAQwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:26:09.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IEventRecommendationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IEventRecommendationService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IEventRecommendationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IEventRecommendationService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IEventRecommendationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:42:43.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IEventDataStructureService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IEventDataStructureService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IEventDataStructureService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IEventDataStructureService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IEventDataStructureService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:20:11.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EventDataStructureService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\EventDataStructureService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\EventDataStructureService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\EventDataStructureService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\EventDataStructureService.cs",
+              "ViewState": "AgIAANcAAAAAAAAAAAAQwPMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:20:36.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IDatabaseManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IDatabaseManagementService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IDatabaseManagementService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IDatabaseManagementService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IDatabaseManagementService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:27:21.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateIssueStatusViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\UpdateIssueStatusViewModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\UpdateIssueStatusViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\UpdateIssueStatusViewModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\UpdateIssueStatusViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:26:24.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EventRecommendationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\EventRecommendationService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\EventRecommendationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\EventRecommendationService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\EventRecommendationService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAQwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:42:01.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DatabaseController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\DatabaseController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\DatabaseController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\DatabaseController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\DatabaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:41:03.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:13:37.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:48:36.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Municipal_App\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:17:31.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IssueLogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\IssueLogViewModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\IssueLogViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\IssueLogViewModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\IssueLogViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T18:47:24.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LocalEventService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\LocalEventService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\LocalEventService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\LocalEventService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\LocalEventService.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAQwJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:45:24.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ILocalEventService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\ILocalEventService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\ILocalEventService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\ILocalEventService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\ILocalEventService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:20:53.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserSearchPattern.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\UserSearchPattern.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\UserSearchPattern.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\UserSearchPattern.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\UserSearchPattern.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:55:11.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\User.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\User.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAQwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:25:29.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SignupViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\SignupViewModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\SignupViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\SignupViewModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\SignupViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:08:51.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PushSubscription.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\PushSubscription.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\PushSubscription.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\PushSubscription.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\PushSubscription.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:19:55.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:19:09.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "EventRecommendation.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\EventRecommendation.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\EventRecommendation.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\EventRecommendation.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\EventRecommendation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:18:33.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ContactFormModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ContactFormModel.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\ContactFormModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\ContactFormModel.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\ContactFormModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:18:10.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Municipal_App\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:17:52.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Issue.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\Issue.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\Issue.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\Issue.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\Issue.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAxwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T19:10:14.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LocalEvent.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\LocalEvent.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\LocalEvent.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\LocalEvent.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\LocalEvent.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:24:28.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DatabaseInfo.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\DatabaseInfo.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Models\\DatabaseInfo.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Models\\DatabaseInfo.cs",
+              "RelativeToolTip": "Municipal_App\\Models\\DatabaseInfo.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAxwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T09:52:17.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T09:55:41.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IServiceRequestStatusService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IServiceRequestStatusService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IServiceRequestStatusService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IServiceRequestStatusService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IServiceRequestStatusService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T09:37:23.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Database\\Index.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Database\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Database\\Index.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Database\\Index.cshtml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAIwN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T09:53:33.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Events\\Index.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Events\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Events\\Index.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Events\\Index.cshtml",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAQwG4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T10:01:09.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAOwBAAAAAAAAAAAIwAgCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-15T16:05:42.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Report.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\Report.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\Report.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\Report.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\Report.cshtml",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAIwAgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-15T15:27:27.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ReportSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\ReportSuccess.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\ReportSuccess.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\ReportSuccess.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\ReportSuccess.cshtml",
+              "ViewState": "AgIAABUAAABg0zRN0zQvwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-15T13:44:02.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "TrackIssue.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\TrackIssue.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Issues\\TrackIssue.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Issues\\TrackIssue.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Issues\\TrackIssue.cshtml",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAIwH4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T18:51:02.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Municipal_App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Municipal_App\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAIwK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-15T13:34:10.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\UserService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\UserService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAiwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:00:35.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "PushSubscriptionService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\PushSubscriptionService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\PushSubscriptionService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\PushSubscriptionService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\PushSubscriptionService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAqwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:38:56.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\NotificationService.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:34:57.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IssueService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IssueService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IssueService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IssueService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IssueService.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAiwNoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:39:46.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "IPushSubscriptionService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IPushSubscriptionService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IPushSubscriptionService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IPushSubscriptionService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IPushSubscriptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:38:11.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\INotificationService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T14:33:34.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "IIssueService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IIssueService.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Services\\IIssueService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Services\\IIssueService.cs",
+              "RelativeToolTip": "Municipal_App\\Services\\IIssueService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA4wCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:44:51.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "00000000000000_CreateIdentitySchema.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeToolTip": "Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAAANwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:33:21.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "00000000000000_CreateIdentitySchema.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeDocumentMoniker": "Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeToolTip": "Municipal_App\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:33:44.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Municipal_App\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\prog7312-part3-ST10062630\\prog7312-part3-ST10062630\\Municipal_App\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Municipal_App\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAJYFAAAAAAAAAAAAAKgFAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-14T10:12:14.518Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

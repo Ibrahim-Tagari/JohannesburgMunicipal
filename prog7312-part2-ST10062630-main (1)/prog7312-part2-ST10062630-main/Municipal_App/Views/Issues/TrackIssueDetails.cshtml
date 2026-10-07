@@ -1,0 +1,41 @@
+﻿@model Municipal_App.Models.Issue
+@{
+    ViewData["Title"] = $"Issue #{Model.Id} Details";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <!-- Back Button -->
+            <div class="mb-3">
+                <a asp-action="TrackIssue" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-1"></i>
+                    Back to Issues
+                </a>
+            </div>
+
+            <!-- Issue Details Card -->
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-hashtag me-2"></i>
+                        Issue #@Model.Id Details
+                    </h4>
+                </div>
+                <div class="card-body">
+                    @await Html.PartialAsync("_IssueDetailsPartial", Model)
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="mt-4 text-center">
+                            <a asp-action="UpdateStatus" asp-route-id="@Model.Id" class="btn btn-warning">
+                                <i class="fas fa-edit me-1"></i>
+                                Update Issue Status
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model Municipal_App.Models.Issue
+
+<div class="container mt-4">
+    <div class="alert alert-success">
+        <h4>Issue Reported Successfully!</h4>
+        <p><strong>Reference ID:</strong> @Model.Id</p>
+        <p><strong>Status:</strong> @Model.Status</p>
+        <p><strong>Location:</strong> @Model.Location</p>
+        <p><strong>Description:</strong> @Model.Description</p>
+        <p><strong>Category:</strong> @Model.Category</p>
+        <p><strong>Priority:</strong> @Model.Priority</p>
+        <p><strong>Date Reported:</strong> @Model.DateReported.ToString("f")</p>
+
+        @if (Model.AttachedFiles != null && Model.AttachedFiles.Any())
+        {
+            <p><strong>Attached Files:</strong></p>
+            <ul>
+                @foreach (var file in Model.AttachedFiles)
+                {
+                    <li><a href="~/uploads/@file" target="_blank">@file</a></li>
+                }
+            </ul>
+        }
+    </div>
+
+    <a asp-action="TrackIssue" class="btn btn-primary">Track My Issues</a>
+</div>

@@ -1,0 +1,130 @@
+﻿@model Municipal_App.Models.UpdateIssueStatusViewModel
+@{
+    ViewData["Title"] = $"Update Issue #{Model.Id} Status";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Back Button -->
+            <div class="mb-3">
+                <a asp-action="IssueLog" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-1"></i>
+                    Back to Issue Log
+                </a>
+            </div>
+
+            <!-- Update Status Form -->
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0">
+                        <i class="fas fa-edit me-2"></i>
+                        Update Issue #@Model.Id Status
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <!-- Issue Summary -->
+                    <div class="alert alert-info mb-4">
+                        <h6 class="alert-heading">Issue Summary</h6>
+                        <p class="mb-2"><strong>Location:</strong> @Model.Location</p>
+                        <p class="mb-2"><strong>Category:</strong> @Model.Category</p>
+                        <p class="mb-2"><strong>Reported:</strong> @Model.DateReported.ToString("dd MMM yyyy 'at' HH:mm")</p>
+                        <p class="mb-0"><strong>Description:</strong> @Model.Description</p>
+                    </div>
+
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @TempData["ErrorMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form asp-action="UpdateStatus" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="Location" />
+                        <input type="hidden" asp-for="Category" />
+                        <input type="hidden" asp-for="Description" />
+                        <input type="hidden" asp-for="DateReported" />
+                        <input type="hidden" asp-for="ContactEmail" />
+                        <input type="hidden" asp-for="ContactPhone" />
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Status" class="form-label fw-semibold">
+                                    <i class="fas fa-flag me-1"></i>
+                                    @Html.DisplayNameFor(m => m.Status) *
+                                </label>
+                                <select asp-for="Status" class="form-select form-select-lg">
+                                    <option value="Submitted">Submitted</option>
+                                    <option value="Assigned">Assigned</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Closed">Closed</option>
+                                </select>
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Priority" class="form-label fw-semibold">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>
+                                    @Html.DisplayNameFor(m => m.Priority) *
+                                </label>
+                                <select asp-for="Priority" class="form-select form-select-lg">
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                    <option value="Critical">Critical</option>
+                                </select>
+                                <span asp-validation-for="Priority" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AssignedTo" class="form-label fw-semibold">
+                                <i class="fas fa-user me-1"></i>
+                                @Html.DisplayNameFor(m => m.AssignedTo)
+                            </label>
+                            <input asp-for="AssignedTo" class="form-control form-control-lg"
+                                   placeholder="e.g., John Smith - Road Maintenance Team" />
+                            <span asp-validation-for="AssignedTo" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="UpdateNotes" class="form-label fw-semibold">
+                                <i class="fas fa-sticky-note me-1"></i>
+                                @Html.DisplayNameFor(m => m.UpdateNotes)
+                            </label>
+                            <textarea asp-for="UpdateNotes" class="form-control" rows="4"
+                                      placeholder="Add notes about the current status, actions taken, or next steps..."></textarea>
+                            <span asp-validation-for="UpdateNotes" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="IssueLog" class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-times me-1"></i>
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-save me-1"></i>
+                                Update Status
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Auto-resize textarea
+            $('textarea').on('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        });
+    </script>
+}

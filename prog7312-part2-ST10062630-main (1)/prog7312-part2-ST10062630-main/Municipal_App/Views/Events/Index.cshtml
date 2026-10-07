@@ -1,0 +1,366 @@
+﻿@model List<Municipal_App.Models.LocalEvent>
+@{
+    ViewData["Title"] = "Local Events and Announcements";
+    var recommendations = ViewBag.Recommendations as List<Municipal_App.Models.EventRecommendation> ?? new List<Municipal_App.Models.EventRecommendation>();
+    var categories = ViewBag.Categories as List<string> ?? new List<string>();
+    var eventStats = ViewBag.EventStats as Dictionary<string, int> ?? new Dictionary<string, int>();
+}
+
+<div class="container-fluid py-4">
+    Page Header
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm bg-gradient-primary text-white">
+                <div class="card-body p-4">
+                    <h1 class="display-5 fw-bold mb-2">
+                        <i class="fas fa-calendar-alt me-3"></i>
+                        Local Events & Announcements
+                    </h1>
+                    <p class="lead mb-0">Stay connected with your community through upcoming events and important announcements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Statistics Dashboard
+    <div class="row g-3 mb-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-calendar-check fa-2x text-primary"></i>
+                    </div>
+                    <h3 class="fw-bold text-primary mb-1">@ViewBag.TotalEvents</h3>
+                    <p class="text-muted small mb-0">Total Events</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-filter fa-2x text-success"></i>
+                    </div>
+                    <h3 class="fw-bold text-success mb-1">@ViewBag.FilteredCount</h3>
+                    <p class="text-muted small mb-0">Filtered Results</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-layer-group fa-2x text-info"></i>
+                    </div>
+                    <h3 class="fw-bold text-info mb-1">@ViewBag.UniqueCategories</h3>
+                    <p class="text-muted small mb-0">Categories</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="stat-icon mb-2">
+                        <i class="fas fa-calendar-day fa-2x text-warning"></i>
+                    </div>
+                    <h3 class="fw-bold text-warning mb-1">@ViewBag.UniqueDates</h3>
+                    <p class="text-muted small mb-0">Event Days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Recommendations Section
+    @if (recommendations.Any())
+    {
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="mb-0 fw-bold">
+                            <i class="fas fa-star text-warning me-2"></i>
+                            Recommended For You
+                        </h5>
+                        <small class="text-muted">Based on your search history and preferences</small>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            @foreach (var rec in recommendations.Take(5))
+                            {
+                                <div class="col-md-4 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm recommendation-card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-start mb-2">
+                                                <span class="badge bg-warning text-dark me-2">
+                                                    <i class="fas fa-star me-1"></i>
+                                                    @Math.Round(rec.RelevanceScore * 100)%
+                                                </span>
+                                                <span class="badge bg-primary">@rec.Event.Category</span>
+                                            </div>
+                                            <h6 class="card-title fw-bold mb-2">@rec.Event.Title</h6>
+                                            <p class="card-text small text-muted mb-2">
+                                                <i class="fas fa-calendar me-1"></i>
+                                                @rec.Event.EventDate.ToString("MMM dd, yyyy")
+                                            </p>
+                                            <p class="card-text small text-success mb-2">
+                                                <i class="fas fa-lightbulb me-1"></i>
+                                                @rec.RecommendationReason
+                                            </p>
+                                            <a asp-action="Details" asp-route-id="@rec.Event.EventId" class="btn btn-sm btn-outline-primary w-100">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        Left Sidebar - Filters and Categories
+        <div class="col-lg-3 mb-4">
+            <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
+                <div class="card-header bg-white border-0">
+                    <h5 class="mb-0 fw-bold">
+                        <i class="fas fa-filter me-2"></i>
+                        Filters
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form method="get" asp-action="Index" id="filterForm">
+                        Search
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-search me-1"></i>
+                                Search Events
+                            </label>
+                            <input type="text" class="form-control" name="searchTerm"
+                                   value="@ViewBag.SearchTerm" placeholder="Search by title or description...">
+                        </div>
+
+                        Category Filter
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-layer-group me-1"></i>
+                                Category
+                            </label>
+                            <select class="form-select" name="category" id="categoryFilter">
+                                <option value="">All Categories</option>
+                                @foreach (var cat in categories)
+                                {
+                                    <option value="@cat" selected="@(cat == ViewBag.SelectedCategory)">
+                                        @cat (@(eventStats.ContainsKey(cat) ? eventStats[cat] : 0))
+                                    </option>
+                                }
+                            </select>
+                        </div>
+
+                        Sort By
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-sort me-1"></i>
+                                Sort By
+                            </label>
+                            <select class="form-select" name="sortBy">
+                                <option value="date" selected="@(ViewBag.SortBy == "date")">Event Date</option>
+                                <option value="priority" selected="@(ViewBag.SortBy == "priority")">Priority</option>
+                                <option value="category" selected="@(ViewBag.SortBy == "category")">Category</option>
+                                <option value="popularity" selected="@(ViewBag.SortBy == "popularity")">Most Popular</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mb-2">
+                            <i class="fas fa-search me-2"></i>Apply Filters
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary w-100">
+                            <i class="fas fa-redo me-2"></i>Clear Filters
+                        </a>
+                    </form>
+
+                    <hr class="my-3">
+
+                    Category Statistics
+                    <div class="category-stats">
+                        <h6 class="fw-bold mb-3">
+                            <i class="fas fa-chart-bar me-2"></i>
+                            Category Breakdown
+                        </h6>
+                        @foreach (var stat in eventStats.OrderByDescending(s => s.Value).Take(8))
+                        {
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="small">@stat.Key</span>
+                                <span class="badge bg-primary rounded-pill">@stat.Value</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Main Content - Events List
+        <div class="col-lg-9">
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            @if (!Model.Any())
+            {
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-calendar-times fa-4x text-muted mb-3"></i>
+                        <h4 class="text-muted">No Events Found</h4>
+                        <p class="text-muted">Try adjusting your search criteria or filters.</p>
+                        <a asp-action="Index" class="btn btn-primary">
+                            <i class="fas fa-redo me-2"></i>View All Events
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row g-4">
+                    @foreach (var evt in Model)
+                    {
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card event-card h-100 border-0 shadow-sm">
+                                <div class="card-header border-0 bg-white">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-primary">@evt.Category</span>
+                                        @if (evt.Priority == 1)
+                                        {
+                                            <span class="badge bg-danger">
+                                                <i class="fas fa-exclamation-circle me-1"></i>High Priority
+                                            </span>
+                                        }
+                                        else if (evt.Priority == 2)
+                                        {
+                                            <span class="badge bg-warning text-dark">Medium</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Low</span>
+                                        }
+                                    </div>
+                                    <h5 class="card-title fw-bold mb-0">@evt.Title</h5>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <p class="card-text text-muted small mb-3">
+                                        @(evt.Description.Length > 100 ? evt.Description.Substring(0, 100) + "..." : evt.Description)
+                                    </p>
+
+                                    <div class="event-details mb-3">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fas fa-calendar text-primary me-2"></i>
+                                            <span class="small">@evt.EventDate.ToString("MMMM dd, yyyy")</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fas fa-clock text-success me-2"></i>
+                                            <span class="small">@evt.EventDate.ToString("hh:mm tt")</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                                            <span class="small">@evt.Location</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-user text-info me-2"></i>
+                                            <span class="small">@evt.Organizer</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-eye me-1"></i>@evt.ViewCount views
+                                        </small>
+                                        <a asp-action="Details" asp-route-id="@evt.EventId"
+                                           class="btn btn-sm btn-primary">
+                                            <i class="fas fa-info-circle me-1"></i>Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-submit form on filter change for better UX
+        document.getElementById('categoryFilter').addEventListener('change', function() {
+            document.getElementById('filterForm').submit();
+        });
+
+        // Add animation to cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.event-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.3s ease';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 50);
+            });
+        });
+    </script>
+}
+
+<style>
+    .event-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+        }
+
+    .recommendation-card {
+        transition: transform 0.2s ease;
+    }
+
+        .recommendation-card:hover {
+            transform: scale(1.05);
+        }
+
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    }
+
+    .stat-icon {
+        animation: pulse 2s infinite;
+    }
+
+    keyframes pulse {
+        0%, 100%
+
+    {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    }
+
+    .sticky-top {
+        position: sticky;
+        z-index: 1020;
+    }
+</style>

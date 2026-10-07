@@ -1,0 +1,488 @@
+﻿@model ContactFormModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="contact-hero bg-gradient-success text-white py-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-envelope me-3"></i>
+                    Get in Touch
+                </h1>
+                <p class="lead mb-4">
+                    We're here to help! Contact our dedicated support team for assistance
+                    with municipal services, technical support, or general inquiries.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="contact-highlight">
+                        <i class="fas fa-clock me-2"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="contact-highlight">
+                        <i class="fas fa-reply me-2"></i>
+                        <span>Quick Response</span>
+                    </div>
+                    <div class="contact-highlight">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        <span>Secure Platform</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="/placeholder.svg?height=250&width=300"
+                     alt="Contact Us" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-lg-8 mb-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-4">
+                    <h3 class="mb-0 fw-bold">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Send Us a Message
+                    </h3>
+                    <p class="mb-0 mt-2 opacity-75">Fill out the form below and we'll get back to you within 24 hours</p>
+                </div>
+                <div class="card-body p-4">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form asp-action="Contact" method="post" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label asp-for="FullName" class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.FullName) *
+                                </label>
+                                <input asp-for="FullName" class="form-control form-control-lg"
+                                       placeholder="Enter your full name" />
+                                <span asp-validation-for="FullName" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-semibold">
+                                    <i class="fas fa-envelope me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.Email) *
+                                </label>
+                                <input asp-for="Email" class="form-control form-control-lg"
+                                       placeholder="your.email@example.com" />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="PhoneNumber" class="form-label fw-semibold">
+                                    <i class="fas fa-phone me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.PhoneNumber)
+                                </label>
+                                <input asp-for="PhoneNumber" class="form-control form-control-lg"
+                                       placeholder="+27 11 123 4567" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Department" class="form-label fw-semibold">
+                                    <i class="fas fa-building me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.Department) *
+                                </label>
+                                <select asp-for="Department" class="form-select form-select-lg">
+                                    <option value="">Select Department</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Municipal Services">Municipal Services</option>
+                                    <option value="Account Management">Account Management</option>
+                                    <option value="Billing Inquiries">Billing Inquiries</option>
+                                    <option value="General Information">General Information</option>
+                                    <option value="Complaints">Complaints & Feedback</option>
+                                </select>
+                                <span asp-validation-for="Department" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <label asp-for="Subject" class="form-label fw-semibold">
+                                    <i class="fas fa-tag me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.Subject) *
+                                </label>
+                                <input asp-for="Subject" class="form-control form-control-lg"
+                                       placeholder="Brief description of your inquiry" />
+                                <span asp-validation-for="Subject" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Priority" class="form-label fw-semibold">
+                                    <i class="fas fa-exclamation-circle me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.Priority)
+                                </label>
+                                <select asp-for="Priority" class="form-select form-select-lg">
+                                    <option value="Low">Low</option>
+                                    <option value="Normal" selected>Normal</option>
+                                    <option value="High">High</option>
+                                    <option value="Urgent">Urgent</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="Message" class="form-label fw-semibold">
+                                    <i class="fas fa-comment me-1 text-primary"></i>
+                                    @Html.DisplayNameFor(m => m.Message) *
+                                </label>
+                                <textarea asp-for="Message" class="form-control" rows="6"
+                                          placeholder="Please provide detailed information about your inquiry..."></textarea>
+                                <div class="form-text">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Minimum 10 characters required
+                                </div>
+                                <span asp-validation-for="Message" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success btn-lg px-5">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm contact-info-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="contact-icon bg-primary text-white mb-3">
+                                <i class="fas fa-phone fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-primary">Call Us</h5>
+                            <p class="text-muted mb-2">Speak directly with our support team</p>
+                            <p class="fw-bold text-dark mb-2">+27 11 123 4567</p>
+                            <small class="text-muted">Mon-Fri: 8:00 AM - 6:00 PM</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm contact-info-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="contact-icon bg-success text-white mb-3">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-success">Email Us</h5>
+                            <p class="text-muted mb-2">Send us a detailed message</p>
+                            <p class="fw-bold text-dark mb-2">support@municipal.gov.za</p>
+                            <small class="text-muted">Response within 24 hours</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm contact-info-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="contact-icon bg-info text-white mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-info">Visit Us</h5>
+                            <p class="text-muted mb-2">Main office location</p>
+                            <p class="fw-bold text-dark mb-2">123 Municipal Drive<br>Johannesburg, 2001</p>
+                            <small class="text-muted">Mon-Fri: 8:00 AM - 5:00 PM</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm contact-info-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="contact-icon bg-warning text-white mb-3">
+                                <i class="fas fa-comments fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-warning">Live Chat</h5>
+                            <p class="text-muted mb-2">Chat with our support team</p>
+                            <button class="btn btn-outline-warning btn-sm" disabled>
+                                <i class="fas fa-comment-dots me-1"></i>
+                                Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-contact mt-4">
+                <div class="alert alert-danger border-0" role="alert">
+                    <h6 class="alert-heading fw-bold">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Emergency Municipal Services
+                    </h6>
+                    <p class="mb-2">For urgent municipal emergencies (water, electricity, public safety):</p>
+                    <p class="fw-bold fs-4 mb-0">
+                        <i class="fas fa-phone me-2"></i>
+                        107
+                    </p>
+                    <small>Available 24/7 for critical municipal emergencies</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-light py-4">
+                    <h3 class="mb-0 fw-bold text-primary">
+                        <i class="fas fa-clock me-2"></i>
+                        Office Hours & Availability
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-dark mb-3">Regular Support Hours</h5>
+                            <div class="office-hours">
+                                <div class="hour-item d-flex justify-content-between mb-2">
+                                    <span>Monday - Friday</span>
+                                    <span class="fw-bold text-success">8:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hour-item d-flex justify-content-between mb-2">
+                                    <span>Saturday</span>
+                                    <span class="fw-bold text-warning">9:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="hour-item d-flex justify-content-between mb-2">
+                                    <span>Sunday</span>
+                                    <span class="fw-bold text-danger">Closed</span>
+                                </div>
+                                <div class="hour-item d-flex justify-content-between">
+                                    <span>Public Holidays</span>
+                                    <span class="fw-bold text-danger">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-dark mb-3">Emergency Services</h5>
+                            <div class="emergency-info">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-shield-alt text-danger me-3 fa-lg"></i>
+                                    <div>
+                                        <div class="fw-bold">24/7 Emergency Line</div>
+                                        <small class="text-muted">Water, electricity, public safety emergencies</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-globe text-primary me-3 fa-lg"></i>
+                                    <div>
+                                        <div class="fw-bold">Online Platform</div>
+                                        <small class="text-muted">24/7 issue reporting and tracking</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-envelope text-success me-3 fa-lg"></i>
+                                    <div>
+                                        <div class="fw-bold">Email Support</div>
+                                        <small class="text-muted">Response within 24 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="faq-section">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-primary">Frequently Asked Questions</h2>
+                    <p class="lead text-muted">Quick answers to common questions</p>
+                </div>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <i class="fas fa-question-circle me-2 text-primary"></i>
+                                How do I report a municipal issue?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Reporting an issue is easy! Simply:</p>
+                                <ol>
+                                    <li>Create an account or log in to your existing account</li>
+                                    <li>Click on "Report Issues" in the navigation menu</li>
+                                    <li>Fill out the issue details including location, category, and description</li>
+                                    <li>Upload photos if available</li>
+                                    <li>Submit your report and receive a tracking number</li>
+                                </ol>
+                                <p>You'll receive updates via SMS and email as your issue progresses through our system.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <i class="fas fa-question-circle me-2 text-primary"></i>
+                                How long does it take to resolve issues?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Resolution times vary depending on the type and complexity of the issue:</p>
+                                <ul>
+                                    <li><strong>Emergency issues:</strong> Immediate response (within 2-4 hours)</li>
+                                    <li><strong>High priority:</strong> 24-48 hours</li>
+                                    <li><strong>Medium priority:</strong> 3-7 business days</li>
+                                    <li><strong>Low priority:</strong> 1-2 weeks</li>
+                                </ul>
+                                <p>You can track the progress of your issue in real-time using our tracking system.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <i class="fas fa-question-circle me-2 text-primary"></i>
+                                Is my personal information secure?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, we take your privacy and security seriously. Our platform features:</p>
+                                <ul>
+                                    <li>256-bit SSL encryption for all data transmission</li>
+                                    <li>Secure data storage compliant with South African data protection laws</li>
+                                    <li>Regular security audits and updates</li>
+                                    <li>Strict access controls for municipal staff</li>
+                                </ul>
+                                <p>We never share your personal information with third parties without your explicit consent.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <i class="fas fa-question-circle me-2 text-primary"></i>
+                                Can I use the platform without creating an account?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>While you can browse general information without an account, reporting and tracking issues requires registration. Creating an account allows you to:</p>
+                                <ul>
+                                    <li>Report municipal issues</li>
+                                    <li>Track the progress of your reports</li>
+                                    <li>Receive updates via SMS and email</li>
+                                    <li>Access your complete issue history</li>
+                                    <li>Participate in community forums (coming soon)</li>
+                                </ul>
+                                <p>Registration is free and only takes a few minutes!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <i class="fas fa-question-circle me-2 text-primary"></i>
+                                What municipalities are currently supported?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>We currently serve over 50 municipalities across South Africa, including major areas in:</p>
+                                <ul>
+                                    <li><strong>Gauteng:</strong> Johannesburg, Pretoria, Ekurhuleni, and surrounding areas</li>
+                                    <li><strong>Western Cape:</strong> Cape Town, Stellenbosch, George, and surrounding areas</li>
+                                    <li><strong>KwaZulu-Natal:</strong> Durban, Pietermaritzburg, and surrounding areas</li>
+                                    <li><strong>Other Provinces:</strong> Expanding rapidly to serve more communities</li>
+                                </ul>
+                                <p>If your municipality isn't listed, contact us to discuss bringing our services to your area.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contact-hero {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    }
+
+    .contact-highlight {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .contact-info-card:hover {
+        transform: translateY(-3px);
+        transition: all 0.3s ease;
+    }
+
+    .office-hours .hour-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+        .office-hours .hour-item:last-child {
+            border-bottom: none;
+        }
+
+    .emergency-info .d-flex {
+        padding: 12px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin-bottom: 12px !important;
+    }
+
+        .emergency-info .d-flex:last-child {
+            margin-bottom: 0 !important;
+        }
+
+    .accordion-button {
+        font-weight: 600;
+    }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            box-shadow: none;
+        }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

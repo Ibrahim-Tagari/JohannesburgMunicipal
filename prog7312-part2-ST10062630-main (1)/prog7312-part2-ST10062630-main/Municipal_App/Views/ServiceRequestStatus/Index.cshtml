@@ -1,0 +1,226 @@
+﻿@model List<Municipal_App.Models.Issue>
+@{
+    ViewData["Title"] = "Service Request Status";
+    var statistics = ViewBag.Statistics as Dictionary<string, object>;
+}
+
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-4 fw-bold text-primary">
+                <i class="fas fa-tasks me-3"></i>Service Request Status
+            </h1>
+            <p class="lead text-muted">Track and manage service requests using advanced data structures</p>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Total Requests</h6>
+                            <h3 class="fw-bold mb-0">@ViewBag.TotalRequests</h3>
+                        </div>
+                        <div class="bg-primary bg-opacity-10 p-3 rounded">
+                            <i class="fas fa-clipboard-list fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Graph Nodes</h6>
+                            <h3 class="fw-bold mb-0">@(statistics?["GraphNodes"] ?? 0)</h3>
+                        </div>
+                        <div class="bg-success bg-opacity-10 p-3 rounded">
+                            <i class="fas fa-project-diagram fa-2x text-success"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Heap Size</h6>
+                            <h3 class="fw-bold mb-0">@(statistics?["HeapSize"] ?? 0)</h3>
+                        </div>
+                        <div class="bg-warning bg-opacity-10 p-3 rounded">
+                            <i class="fas fa-layer-group fa-2x text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Optimal Cost</h6>
+                            <h3 class="fw-bold mb-0">@string.Format("{0:F1}", statistics?["OptimalCost"] ?? 0)</h3>
+                        </div>
+                        <div class="bg-info bg-opacity-10 p-3 rounded">
+                            <i class="fas fa-chart-line fa-2x text-info"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <a asp-action="PriorityQueue" class="btn btn-primary w-100 py-3">
+                <i class="fas fa-sort-amount-down me-2"></i>Priority Queue
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-action="DependencyGraph" class="btn btn-success w-100 py-3">
+                <i class="fas fa-sitemap me-2"></i>Dependency Graph
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-action="OptimalClusters" class="btn btn-warning w-100 py-3">
+                <i class="fas fa-bezier-curve me-2"></i>MST Clusters
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-action="DataStructures" class="btn btn-info w-100 py-3">
+                <i class="fas fa-chart-bar me-2"></i>Data Structures
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Index">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" name="searchTerm" value="@ViewBag.SearchTerm"
+                               class="form-control" placeholder="Search by ID, location, category, or description...">
+                    </div>
+                    <div class="col-md-4">
+                        <select name="status" class="form-select">
+                            <option value="All" selected>All Statuses</option>
+                            <option value="Submitted">Submitted</option>
+                            <option value="Under Review">Under Review</option>
+                            <option value="Approved">Approved</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-search me-2"></i>Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Requests Table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0 fw-bold">Service Requests</h5>
+        </div>
+        <div class="card-body p-0">
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Location</th>
+                                <th>Category</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Days Open</th>
+                                <th>Date Reported</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var request in Model)
+                            {
+                                <tr>
+                                    <td><strong>#@request.Id</strong></td>
+                                    <td>@request.Location</td>
+                                    <td><span class="badge bg-secondary">@request.Category</span></td>
+                                    <td>
+                                        @if (request.Priority == "Critical")
+                                        {
+                                            <span class="badge bg-danger">@request.Priority</span>
+                                        }
+                                        else if (request.Priority == "High")
+                                        {
+                                            <span class="badge bg-warning">@request.Priority</span>
+                                        }
+                                        else if (request.Priority == "Medium")
+                                        {
+                                            <span class="badge bg-info">@request.Priority</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">@request.Priority</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (request.Status == "Resolved")
+                                        {
+                                            <span class="badge bg-success">@request.Status</span>
+                                        }
+                                        else if (request.Status == "In Progress")
+                                        {
+                                            <span class="badge bg-primary">@request.Status</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">@request.Status</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @request.DaysOpen days
+                                        @if (request.DaysOpen > 14)
+                                        {
+                                            <i class="fas fa-exclamation-triangle text-danger ms-1" title="Overdue"></i>
+                                        }
+                                    </td>
+                                    <td>@request.DateReported.ToString("MMM dd, yyyy")</td>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@request.Id" class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-eye me-1"></i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">No service requests found.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

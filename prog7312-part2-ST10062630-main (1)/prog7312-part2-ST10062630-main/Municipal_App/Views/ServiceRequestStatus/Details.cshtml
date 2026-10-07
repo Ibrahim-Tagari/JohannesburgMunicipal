@@ -1,0 +1,212 @@
+﻿@model Municipal_App.Models.Issue
+@{
+    ViewData["Title"] = $"Request #{Model.Id} Details";
+    var relatedRequests = ViewBag.RelatedRequests as List<Municipal_App.Models.Issue> ?? new List<Municipal_App.Models.Issue>();
+    var dependencyChain = ViewBag.DependencyChain as List<Municipal_App.Models.Issue> ?? new List<Municipal_App.Models.Issue>();
+}
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Request #@Model.Id Details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Location</h6>
+                            <p class="fw-bold">@Model.Location</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Category</h6>
+                            <p><span class="badge bg-secondary">@Model.Category</span></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Priority</h6>
+                            <p>
+                                @if (Model.Priority == "Critical")
+                                {
+                                    <span class="badge bg-danger">@Model.Priority</span>
+                                }
+                                else if (Model.Priority == "High")
+                                {
+                                    <span class="badge bg-warning">@Model.Priority</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-info">@Model.Priority</span>
+                                }
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-muted">Status</h6>
+                            <p>
+                                @if (Model.Status == "Resolved")
+                                {
+                                    <span class="badge bg-success">@Model.Status</span>
+                                }
+                                else if (Model.Status == "In Progress")
+                                {
+                                    <span class="badge bg-primary">@Model.Status</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning">@Model.Status</span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6 class="text-muted">Description</h6>
+                        <p>@Model.Description</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="text-muted">Date Reported</h6>
+                            <p>@Model.DateReported.ToString("MMM dd, yyyy")</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-muted">Days Open</h6>
+                            <p>@Model.DaysOpen days</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-muted">Reported By</h6>
+                            <p>@Model.User?.Username</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Requests (Graph Traversal - BFS) -->
+            @if (relatedRequests.Any())
+            {
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-project-diagram me-2"></i>Related Requests (Graph BFS)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Found using Breadth-First Search traversal on dependency graph</p>
+                        <div class="list-group">
+                            @foreach (var related in relatedRequests)
+                            {
+                                <a asp-action="Details" asp-route-id="@related.Id" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Request #@related.Id</h6>
+                                            <p class="mb-0 text-muted small">@related.Location - @related.Category</p>
+                                        </div>
+                                        <span class="badge bg-secondary">@related.Priority</span>
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Dependency Chain (Graph Traversal - DFS) -->
+            @if (dependencyChain.Any())
+            {
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-warning">
+                        <h5 class="mb-0">
+                            <i class="fas fa-sitemap me-2"></i>Dependency Chain (Graph DFS)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Found using Depth-First Search traversal on dependency graph</p>
+                        <div class="list-group">
+                            @foreach (var dep in dependencyChain)
+                            {
+                                <a asp-action="Details" asp-route-id="@dep.Id" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Request #@dep.Id</h6>
+                                            <p class="mb-0 text-muted small">@dep.Location - @dep.Category</p>
+                                        </div>
+                                        <span class="badge bg-secondary">@dep.Priority</span>
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Data Structure Operations</h5>
+                </div>
+                <div class="card-body">
+                    <p class="small text-muted">This request is stored and managed using:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Binary Search Tree</strong> - Fast ID lookup
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>AVL Tree</strong> - Balanced priority sorting
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Red-Black Tree</strong> - Days open sorting
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Min-Heap</strong> - Priority queue
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>Graph</strong> - Dependency tracking
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong>MST</strong> - Optimal clustering
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a asp-action="PriorityQueue" class="btn btn-outline-primary">
+                            <i class="fas fa-sort-amount-down me-2"></i>View Priority Queue
+                        </a>
+                        <a asp-action="DependencyGraph" class="btn btn-outline-success">
+                            <i class="fas fa-sitemap me-2"></i>View Full Graph
+                        </a>
+                        <a asp-action="OptimalClusters" class="btn btn-outline-warning">
+                            <i class="fas fa-bezier-curve me-2"></i>View MST Clusters
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

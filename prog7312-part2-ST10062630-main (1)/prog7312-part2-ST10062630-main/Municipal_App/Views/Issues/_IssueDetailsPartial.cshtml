@@ -1,0 +1,286 @@
+﻿@model Municipal_App.Models.Issue
+
+<div class="container-fluid">
+    <!-- Issue Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <h4 class="mb-1 text-primary">
+                        <i class="fas fa-hashtag me-1"></i>
+                        Issue #@Model.Id
+                    </h4>
+                    <p class="text-muted mb-0">
+                        <i class="fas fa-calendar me-1"></i>
+                        Reported on @Model.DateReported.ToString("dddd, dd MMMM yyyy 'at' HH:mm")
+                    </p>
+                </div>
+                <div class="text-end">
+                    @{
+                        var statusClass = Model.Status switch
+                        {
+                            "Submitted" => "bg-warning text-dark",
+                            "Assigned" => "bg-info text-white",
+                            "In Progress" => "bg-primary text-white",
+                            "Resolved" => "bg-success text-white",
+                            "Closed" => "bg-secondary text-white",
+                            _ => "bg-secondary text-white"
+                        };
+
+                        var priorityClass = Model.Priority switch
+                        {
+                            "Low" => "text-success",
+                            "Medium" => "text-warning",
+                            "High" => "text-danger",
+                            "Critical" => "text-danger fw-bold",
+                            _ => "text-secondary"
+                        };
+                    }
+                    <span class="badge @statusClass fs-6 mb-2">
+                        <i class="fas fa-circle me-1" style="font-size: 0.6em;"></i>
+                        @Model.Status
+                    </span>
+                    <br>
+                    <small class="@priorityClass">
+                        <i class="fas fa-flag me-1"></i>
+                        @Model.Priority Priority
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Issue Details Grid -->
+    <div class="row">
+        <!-- Left Column - Main Details -->
+        <div class="col-md-8">
+            <!-- Location and Category -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="mb-0">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Issue Information
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label class="form-label fw-semibold text-muted">Location</label>
+                            <p class="mb-0">
+                                <i class="fas fa-map-marker-alt me-2 text-danger"></i>
+                                @Model.Location
+                            </p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="form-label fw-semibold text-muted">Category</label>
+                            <p class="mb-0">
+                                <span class="badge bg-light text-dark border">
+                                    <i class="fas fa-tag me-1"></i>
+                                    @Model.Category
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="mb-0">
+                        <i class="fas fa-file-text me-2"></i>
+                        Description
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">@Model.Description</p>
+                </div>
+            </div>
+
+            <!-- Attached Files -->
+            @if (Model.AttachedFiles.Any())
+            {
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="fas fa-paperclip me-2"></i>
+                            Attached Files (@Model.AttachedFiles.Count)
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach (var file in Model.AttachedFiles)
+                            {
+                                <div class="col-md-6 mb-2">
+                                    <div class="d-flex align-items-center p-2 border rounded">
+                                        <i class="fas fa-file me-2 text-primary"></i>
+                                        <span class="text-truncate">@file</span>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Update Notes -->
+            @if (!string.IsNullOrEmpty(Model.UpdateNotes))
+            {
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="fas fa-sticky-note me-2"></i>
+                            Latest Update
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-2">@Model.UpdateNotes</p>
+                        @if (Model.LastUpdated.HasValue)
+                        {
+                            <small class="text-muted">
+                                <i class="fas fa-clock me-1"></i>
+                                Updated on @Model.LastUpdated.Value.ToString("dd MMM yyyy 'at' HH:mm")
+                            </small>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Right Column - Status and Contact -->
+        <div class="col-md-4">
+            <!-- Status Timeline -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h6 class="mb-0">
+                        <i class="fas fa-tasks me-2"></i>
+                        Status Timeline
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item @(Model.Status == "Submitted" ? "active" : "completed")">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-1">Submitted</h6>
+                                <small class="text-muted">@Model.DateReported.ToString("dd MMM yyyy")</small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item @(Model.Status == "Assigned" ? "active" : Model.Status == "In Progress" || Model.Status == "Resolved" ? "completed" : "")">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-1">Assigned</h6>
+                                <small class="text-muted">
+                                    @if (!string.IsNullOrEmpty(Model.AssignedTo))
+                                    {
+                                        <span>To @Model.AssignedTo</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Pending assignment</span>
+                                    }
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item @(Model.Status == "In Progress" ? "active" : Model.Status == "Resolved" ? "completed" : "")">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-1">In Progress</h6>
+                                <small class="text-muted">Work in progress</small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item @(Model.Status == "Resolved" ? "active completed" : "")">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-1">Resolved</h6>
+                                <small class="text-muted">
+                                    @if (Model.Status == "Resolved")
+                                    {
+                                        <span class="text-success">Issue resolved!</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Pending resolution</span>
+                                    }
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment Info -->
+            @if (!string.IsNullOrEmpty(Model.AssignedTo))
+            {
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="fas fa-user me-2"></i>
+                            Assignment
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-0">
+                            <strong>Assigned to:</strong><br>
+                            @Model.AssignedTo
+                        </p>
+                    </div>
+                </div>
+            }
+
+            <!-- Contact Information -->
+            @if (!string.IsNullOrEmpty(Model.ContactEmail) || !string.IsNullOrEmpty(Model.ContactPhone))
+            {
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="fas fa-address-book me-2"></i>
+                            Contact Information
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.ContactEmail))
+                        {
+                            <p class="mb-2">
+                                <i class="fas fa-envelope me-2 text-primary"></i>
+                                <a href="mailto:@Model.ContactEmail">@Model.ContactEmail</a>
+                            </p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.ContactPhone))
+                        {
+                            <p class="mb-0">
+                                <i class="fas fa-phone me-2 text-success"></i>
+                                <a href="tel:@Model.ContactPhone">@Model.ContactPhone</a>
+                            </p>
+                        }
+                    </div>
+                </div>
+            }
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0">
+                        <i class="fas fa-bolt me-2"></i>
+                        Quick Actions
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="@Url.Action("Report", "Issues")" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-plus me-1"></i>
+                            Report Similar Issue
+                        </a>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="window.print()">
+                            <i class="fas fa-print me-1"></i>
+                            Print Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

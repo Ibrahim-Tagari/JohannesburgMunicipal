@@ -1,0 +1,14 @@
+{
+  "BackupDate": "2025-09-09T09:34:21.2373061+02:00",
+  "OriginalPath": "MunicipalServices.db",
+  "BackupPath": "C:\\Users\\lab_services_student\\source\\repos\\Municipal_App\\Municipal_App\\Backups\\MunicipalServices_backup_20250909_093421.db",
+  "DatabaseInfo": {
+    "DatabasePath": "C:\\Users\\lab_services_student\\source\\repos\\Municipal_App\\Municipal_App\\MunicipalServices.db",
+    "SizeMB": 0.04296875,
+    "UserCount": 6,
+    "IssueCount": 10,
+    "LastModified": "2025-09-08T16:37:50.0627176+02:00",
+    "WALModeEnabled": false,
+    "Version": ""
+  }
+}

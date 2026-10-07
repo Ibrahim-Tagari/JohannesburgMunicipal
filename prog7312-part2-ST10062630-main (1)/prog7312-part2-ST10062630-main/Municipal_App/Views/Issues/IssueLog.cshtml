@@ -1,0 +1,338 @@
+﻿@model Municipal_App.Models.IssueLogViewModel
+@{
+    ViewData["Title"] = "Issue Log";
+}
+
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="mb-1">
+                        <i class="fas fa-clipboard-list me-2 text-primary"></i>
+                        Issue Log & Status Tracker
+                    </h2>
+                    <p class="text-muted mb-0">Track all reported issues and monitor their progress</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a asp-controller="Issues" asp-action="Report" class="btn btn-primary">
+                        <i class="fas fa-plus me-1"></i>
+                        Report New Issue
+                    </a>
+                    <a asp-controller="Issues" asp-action="TrackIssue" class="btn btn-outline-primary">
+                        <i class="fas fa-search me-1"></i>
+                        Track by ID
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Dashboard -->
+    <div class="row mb-4">
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card bg-gradient-primary text-white h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="mb-0 fw-bold">@Model.Statistics.GetValueOrDefault("Total", 0)</h3>
+                            <p class="mb-0 opacity-75">Total Issues</p>
+                        </div>
+                        <div class="text-white-50">
+                            <i class="fas fa-clipboard-list fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card bg-gradient-warning text-white h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="mb-0 fw-bold">@Model.Statistics.GetValueOrDefault("Submitted", 0)</h3>
+                            <p class="mb-0 opacity-75">Pending Review</p>
+                        </div>
+                        <div class="text-white-50">
+                            <i class="fas fa-clock fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card bg-gradient-info text-white h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="mb-0 fw-bold">@Model.Statistics.GetValueOrDefault("InProgress", 0)</h3>
+                            <p class="mb-0 opacity-75">In Progress</p>
+                        </div>
+                        <div class="text-white-50">
+                            <i class="fas fa-cogs fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card bg-gradient-success text-white h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="mb-0 fw-bold">@Model.Statistics.GetValueOrDefault("Resolved", 0)</h3>
+                            <p class="mb-0 opacity-75">Resolved</p>
+                        </div>
+                        <div class="text-white-50">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-search me-1"></i>Search Issues
+                            </label>
+                            <input type="text" class="form-control" id="searchInput"
+                                   placeholder="Search by ID, location, or description...">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-filter me-1"></i>Filter by Status
+                            </label>
+                            <select class="form-select" id="statusFilter">
+                                <option value="">All Statuses</option>
+                                <option value="Submitted">Submitted</option>
+                                <option value="Assigned">Assigned</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Resolved">Resolved</option>
+                                <option value="Closed">Closed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-tags me-1"></i>Filter by Category
+                            </label>
+                            <select class="form-select" id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="Sanitation">Sanitation</option>
+                                <option value="Roads">Roads & Infrastructure</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="StreetLighting">Street Lighting</option>
+                                <option value="WaterSupply">Water Supply</option>
+                                <option value="WasteManagement">Waste Management</option>
+                                <option value="PublicSafety">Public Safety</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <button class="btn btn-primary me-2" onclick="applyFilters()">
+                                <i class="fas fa-search me-1"></i>Apply Filters
+                            </button>
+                            <button class="btn btn-outline-secondary" onclick="clearFilters()">
+                                <i class="fas fa-times me-1"></i>Clear All
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Issues Display Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">
+                    <i class="fas fa-list me-2"></i>
+                    All Issues (<span id="issueCount">@Model.Issues.Count</span>)
+                </h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="viewMode" id="cardView" checked>
+                    <label class="btn btn-outline-primary" for="cardView">
+                        <i class="fas fa-th-large me-1"></i>Cards
+                    </label>
+                    <input type="radio" class="btn-check" name="viewMode" id="listView">
+                    <label class="btn btn-outline-primary" for="listView">
+                        <i class="fas fa-list me-1"></i>List
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="text-center py-4" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2 text-muted">Loading issues...</p>
+    </div>
+
+    <!-- Issues Container -->
+    <div id="issuesContainer">
+        @if (!Model.Issues.Any())
+        {
+            <div class="row">
+                <div class="col-12">
+                    <div class="card text-center py-5">
+                        <div class="card-body">
+                            <i class="fas fa-inbox fa-4x text-muted mb-3"></i>
+                            <h4 class="text-muted">No Issues Found</h4>
+                            <p class="text-muted">No issues have been reported yet, or your search didn't match any results.</p>
+                            <a asp-controller="Issues" asp-action="Report" class="btn btn-primary">
+                                <i class="fas fa-plus me-1"></i>Report Your First Issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            @await Html.PartialAsync("_IssueCardsPartial", Model.Issues)
+        }
+    </div>
+</div>
+
+<!-- Issue Details Modal -->
+<div class="modal fade" id="issueDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-info-circle me-2"></i>Issue Details
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="issueDetailsContent">
+                <!-- Content will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Real-time search
+            let searchTimeout;
+            $('#searchInput').on('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    applyFilters();
+                }, 500);
+            });
+
+            // Filter change handlers
+            $('#statusFilter, #categoryFilter').on('change', function() {
+                applyFilters();
+            });
+
+            // View mode toggle
+            $('input[name="viewMode"]').on('change', function() {
+                toggleViewMode();
+            });
+        });
+
+        function applyFilters() {
+            const searchTerm = $('#searchInput').val();
+            const status = $('#statusFilter').val();
+            const category = $('#categoryFilter').val();
+
+            $('#loadingIndicator').show();
+            $('#issuesContainer').hide();
+
+            $.get('@Url.Action("SearchIssues", "Issues")', {
+                searchTerm: searchTerm,
+                status: status,
+                category: category
+            }, function(data) {
+                $('#issuesContainer').html(data);
+                updateIssueCount();
+                $('#loadingIndicator').hide();
+                $('#issuesContainer').show();
+            }).fail(function() {
+                $('#loadingIndicator').hide();
+                $('#issuesContainer').show();
+                alert('Error loading issues. Please try again.');
+            });
+        }
+
+        function clearFilters() {
+            $('#searchInput').val('');
+            $('#statusFilter').val('');
+            $('#categoryFilter').val('');
+            applyFilters();
+        }
+
+        function updateIssueCount() {
+            const count = $('.issue-card:visible').length;
+            $('#issueCount').text(count);
+        }
+
+        function toggleViewMode() {
+            const isCardView = $('#cardView').is(':checked');
+            if (isCardView) {
+                $('#issuesContainer').removeClass('list-view').addClass('card-view');
+            } else {
+                $('#issuesContainer').removeClass('card-view').addClass('list-view');
+            }
+        }
+
+        function viewIssueDetails(issueId) {
+            $('#issueDetailsContent').html('<div class="text-center py-3"><div class="spinner-border" role="status"></div></div>');
+            $('#issueDetailsModal').modal('show');
+
+            $.get('@Url.Action("GetIssueDetails", "Issues")/' + issueId, function(data) {
+                $('#issueDetailsContent').html(data);
+            }).fail(function() {
+                $('#issueDetailsContent').html('<div class="alert alert-danger">Error loading issue details. Please try again.</div>');
+            });
+        }
+
+        function getStatusBadgeClass(status) {
+            switch(status) {
+                case 'Submitted': return 'bg-warning';
+                case 'Assigned': return 'bg-info';
+                case 'In Progress': return 'bg-primary';
+                case 'Resolved': return 'bg-success';
+                case 'Closed': return 'bg-secondary';
+                default: return 'bg-secondary';
+            }
+        }
+
+        function getPriorityClass(priority) {
+            switch(priority) {
+                case 'Low': return 'text-success';
+                case 'Medium': return 'text-warning';
+                case 'High': return 'text-danger';
+                case 'Critical': return 'text-danger fw-bold';
+                default: return 'text-secondary';
+            }
+        }
+
+        function confirmDelete(issueId) {
+            if (confirm('Are you sure you want to delete Issue #' + issueId + '? This action cannot be undone.')) {
+                $('#deleteForm' + issueId).submit();
+            }
+        }
+    </script>
+}

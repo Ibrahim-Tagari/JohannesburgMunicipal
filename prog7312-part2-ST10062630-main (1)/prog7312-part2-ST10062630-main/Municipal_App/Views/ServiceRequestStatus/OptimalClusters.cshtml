@@ -1,0 +1,81 @@
+﻿@model List<Municipal_App.Models.Issue>
+@{
+    ViewData["Title"] = "Optimal Request Clusters";
+}
+
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold text-warning">
+                <i class="fas fa-bezier-curve me-3"></i>Optimal Request Clusters (MST)
+            </h1>
+            <p class="lead text-muted">Related service requests clustered using Minimum Spanning Tree algorithm</p>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+            </a>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">Clustered Requests</h6>
+                    <h2 class="fw-bold">@Model.Count</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">Optimal Processing Cost</h6>
+                    <h2 class="fw-bold">@string.Format("{0:F2}", ViewBag.OptimalCost)</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="alert alert-warning">
+                <h5><i class="fas fa-info-circle me-2"></i>About Minimum Spanning Tree</h5>
+                <p class="mb-0">
+                    Kruskal's algorithm finds the minimum cost to connect all related service requests.
+                    This helps identify optimal resource allocation and processing order for related issues.
+                </p>
+            </div>
+
+            <div class="table-responsive mt-4">
+                <table class="table table-hover">
+                    <thead class="table-warning">
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                            <th>Priority</th>
+                            <th>Days Open</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var request in Model)
+                        {
+                            <tr>
+                                <td><strong>#@request.Id</strong></td>
+                                <td>@request.Location</td>
+                                <td><span class="badge bg-secondary">@request.Category</span></td>
+                                <td><span class="badge bg-@(request.Priority == "Critical" ? "danger" : request.Priority == "High" ? "warning" : "info")">@request.Priority</span></td>
+                                <td>@request.DaysOpen days</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@request.Id" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-eye me-1"></i>View
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

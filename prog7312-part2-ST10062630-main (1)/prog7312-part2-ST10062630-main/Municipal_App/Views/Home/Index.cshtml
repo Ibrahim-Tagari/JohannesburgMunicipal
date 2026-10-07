@@ -1,0 +1,520 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var upcomingEvents = ViewBag.UpcomingEvents as List<Municipal_App.Models.LocalEvent> ?? new List<Municipal_App.Models.LocalEvent>();
+}
+
+<div id="municipalCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#municipalCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#municipalCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#municipalCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-slide bg-gradient-primary">
+                <img src="~/images/MunicipalServices.jpg" class="d-block w-100 carousel-bg-image" alt="Municipal Services">
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h1 class="display-4 fw-bold text-white mb-3">
+                                    <i class="fas fa-building me-3"></i>
+                                    Welcome to Municipal Services
+                                </h1>
+                                <p class="lead text-white-75 mb-4">
+                                    Your gateway to efficient municipal service delivery across South Africa.
+                                    Report issues, track progress, and stay connected with your local government.
+                                </p>
+                                @if (User.Identity?.IsAuthenticated == true)
+                                {
+                                    <a asp-controller="Issues" asp-action="Report" class="btn btn-light btn-lg me-3">
+                                        <i class="fas fa-plus-circle me-2"></i>Report an Issue
+                                    </a>
+                                    <a asp-controller="Events" asp-action="Index" class="btn btn-outline-light btn-lg">
+                                        <i class="fas fa-calendar-alt me-2"></i>View Events
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="Account" asp-action="Login" class="btn btn-light btn-lg me-3">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Get Started
+                                    </a>
+                                    <a asp-controller="Account" asp-action="Signup" class="btn btn-outline-light btn-lg">
+                                        <i class="fas fa-user-plus me-2"></i>Register Now
+                                    </a>
+                                }
+                            </div>
+                            <div class="col-md-4 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-slide bg-gradient-success">
+                <img src="~/images/Community1.jpg" class="d-block w-100 carousel-bg-image" alt="Community Engagement">
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h1 class="display-4 fw-bold text-white mb-3">
+                                    <i class="fas fa-users me-3"></i>
+                                    Community First
+                                </h1>
+                                <p class="lead text-white-75 mb-4">
+                                    Empowering South African communities through digital transformation.
+                                    Your voice matters in building better municipalities.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <div class="stat-item">
+                                        <div class="stat-number">1000+</div>
+                                        <div class="stat-label">Issues Resolved</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">50+</div>
+                                        <div class="stat-label">Municipalities</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">24/7</div>
+                                        <div class="stat-label">Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-slide bg-gradient-info">
+                <img src="~/images/Digital.jpg" class="d-block w-100 carousel-bg-image" alt="Digital Innovation">
+                <div class="carousel-bg-digital"></div>
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h1 class="display-4 fw-bold text-white mb-3">
+                                    <i class="fas fa-rocket me-3"></i>
+                                    Digital Innovation
+                                </h1>
+                                <p class="lead text-white-75 mb-4">
+                                    Leading the way in municipal digital transformation.
+                                    Modern solutions for traditional challenges.
+                                </p>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-mobile-alt me-2"></i>Mobile-First Design
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-clock me-2"></i>Real-Time Updates
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-shield-alt me-2"></i>Secure Platform
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#municipalCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#municipalCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container mb-5">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold text-primary mb-3">Municipal Services</h2>
+            <p class="lead text-muted">Comprehensive digital solutions for South African municipalities</p>
+            <div class="divider mx-auto"></div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+                    <div class="service-icon mb-4">
+                        <img src="~/images/ReportIssue.png" alt="Report Issues" class="service-icon-img">
+                    </div>
+                    <h4 class="card-title text-primary mb-3">Report Issues</h4>
+                    <p class="card-text text-muted mb-4">
+                        Report municipal issues such as potholes, water leaks, power outages,
+                        or sanitation problems in your community with our easy-to-use system.
+                    </p>
+                    <div class="service-features mb-4">
+                        <div class="feature-badge">
+                            <i class="fas fa-camera me-1"></i>Photo Upload
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-map-marker-alt me-1"></i>GPS Location
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-clock me-1"></i>24/7 Available
+                        </div>
+                    </div>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a asp-controller="Issues" asp-action="Report" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Report Now
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary btn-lg w-100">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login to Report
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+                    <div class="service-icon mb-4">
+                        <img src="~/images/LocalEvents.png" alt="Local Events" class="service-icon-img">
+                    </div>
+                    <h4 class="card-title text-success mb-3">Local Events</h4>
+                    <p class="card-text text-muted mb-4">
+                        Discover upcoming local events, community meetings, and municipal announcements.
+                        Stay informed about what's happening in your area.
+                    </p>
+                    <div class="service-features mb-4">
+                        <div class="feature-badge">
+                            <i class="fas fa-calendar me-1"></i>Event Calendar
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-search me-1"></i>Smart Search
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-star me-1"></i>Recommendations
+                        </div>
+                    </div>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a asp-controller="Events" asp-action="Index" class="btn btn-success btn-lg w-100">
+                            <i class="fas fa-calendar-alt me-2"></i>View Events
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-success btn-lg w-100">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login to View
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+                    <div class="service-icon mb-4">
+                        <img src="~/images/TrackIssue.png" alt="Track Issues" class="service-icon-img">
+                    </div>
+                    <h4 class="card-title text-info mb-3">Service Requests</h4>
+                    <p class="card-text text-muted mb-4">
+                        Track the status of your service requests with real-time updates
+                        and transparent communication from municipal departments.
+                    </p>
+                    <div class="service-features mb-4">
+                        <div class="feature-badge">
+                            <i class="fas fa-bell me-1"></i>Notifications
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-chart-line me-1"></i>Progress Tracking
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-history me-1"></i>Full History
+                        </div>
+                    </div>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a asp-controller="Issues" asp-action="TrackIssue" class="btn btn-info btn-lg w-100 text-white">
+                            <i class="fas fa-search me-2"></i>Track Requests
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-info btn-lg w-100">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login to Track
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ Upcoming Events Section
+@if (upcomingEvents.Any())
+{
+    <div class="container mb-5">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="display-6 fw-bold text-primary mb-3">
+                    <i class="fas fa-calendar-star me-2"></i>
+                    Upcoming Events
+                </h2>
+                <p class="lead text-muted">Don't miss these upcoming community events</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            @foreach (var evt in upcomingEvents.Take(3))
+            {
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 upcoming-event-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">@evt.Category</span>
+                                <span class="badge bg-secondary">
+                                    @((evt.EventDate - DateTime.Now).Days) days
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">@evt.Title</h5>
+                            <p class="card-text text-muted small mb-3">
+                                @(evt.Description.Length > 80 ? evt.Description.Substring(0, 80) + "..." : evt.Description)
+                            </p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    @evt.EventDate.ToString("MMM dd, yyyy")
+                                </small>
+                            </div>
+                            @if (User.Identity?.IsAuthenticated == true)
+                            {
+                                <a asp-controller="Events" asp-action="Details" asp-route-id="@evt.EventId"
+                                   class="btn btn-sm btn-primary w-100">
+                                    View Details
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-sm btn-outline-primary w-100">
+                                    Login to View
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <div class="text-center mt-4">
+                <a asp-controller="Events" asp-action="Index" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-alt me-2"></i>View All Events
+                </a>
+            </div>
+        }
+    </div>
+}
+
+@if (User.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+{
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="admin-dashboard-card card border-0 shadow-lg">
+                    <div class="card-header bg-gradient-warning text-dark py-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="mb-0 fw-bold">
+                                    <i class="fas fa-user-shield me-3"></i>
+                                    Administrator Dashboard
+                                </h3>
+                                <p class="mb-0 mt-2">Municipal Management & Oversight Tools</p>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <img src="~/images/admin-icon.png" alt="Admin" class="admin-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <p class="text-muted mb-4">
+                            You have administrator privileges with access to comprehensive municipal management features:
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a asp-controller="Issues" asp-action="IssueLog" class="admin-action-card card border-0 bg-light h-100 text-decoration-none">
+                                    <div class="card-body text-center p-3">
+                                        <i class="fas fa-clipboard-list fa-2x text-warning mb-2"></i>
+                                        <h6 class="card-title text-dark">Issue Management</h6>
+                                        <small class="text-muted">View & manage all reported issues</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a asp-controller="Events" asp-action="Index" class="admin-action-card card border-0 bg-light h-100 text-decoration-none">
+                                    <div class="card-body text-center p-3">
+                                        <i class="fas fa-calendar-alt fa-2x text-success mb-2"></i>
+                                        <h6 class="card-title text-dark">Events Management</h6>
+                                        <small class="text-muted">Manage local events & announcements</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a asp-controller="Issues" asp-action="TrackIssue" class="admin-action-card card border-0 bg-light h-100 text-decoration-none">
+                                    <div class="card-body text-center p-3">
+                                        <i class="fas fa-search fa-2x text-info mb-2"></i>
+                                        <h6 class="card-title text-dark">Track & Monitor</h6>
+                                        <small class="text-muted">Advanced tracking & analytics</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a asp-controller="Database" asp-action="Index" class="admin-action-card card border-0 bg-light h-100 text-decoration-none">
+                                    <div class="card-body text-center p-3">
+                                        <i class="fas fa-database fa-2x text-primary mb-2"></i>
+                                        <h6 class="card-title text-dark">Database Tools</h6>
+                                        <small class="text-muted">Backup & system management</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="welcome-card card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h3 class="text-primary mb-3">
+                                <i class="fas fa-info-circle me-2"></i>
+                                @if (User.Identity?.IsAuthenticated == true)
+                                {
+                                    <span>Welcome back, @(User.FindFirst("FullName")?.Value ?? User.Identity?.Name ?? "User")!</span>
+                                }
+                                else
+                                {
+                                    <span>Get Started with Municipal Services</span>
+                                }
+                            </h3>
+                            @if (User.Identity?.IsAuthenticated == true)
+                            {
+                                <p class="text-muted mb-4">
+                                    You are logged in and have access to all available municipal services.
+                                    Use the navigation menu above to report issues, view events, track your submissions, or access municipal resources.
+                                </p>
+                                <div class="user-stats">
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <div class="stat-badge admin-badge">
+                                            <i class="fas fa-crown me-1"></i>Administrator Access
+                                        </div>
+                                        <p class="small text-muted mt-2">
+                                            As an administrator, you have access to all issues and events. You can manage and update their status.
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <div class="stat-badge user-badge">
+                                            <i class="fas fa-user me-1"></i>Registered Citizen
+                                        </div>
+                                        <p class="small text-muted mt-2">
+                                            You can report new issues, view local events, and track the progress of your submissions.
+                                        </p>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted mb-4">
+                                    Welcome to the Municipal Services Application! This platform is designed to improve
+                                    citizen engagement and service delivery across South African municipalities.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                                    </a>
+                                    <a asp-controller="Account" asp-action="Signup" class="btn btn-outline-primary btn-lg">
+                                        <i class="fas fa-user-plus me-2"></i>Create Account
+                                    </a>
+                                </div>
+                                <p class="small text-muted mt-3">
+                                    Join thousands of South African citizens using our platform to improve their communities.
+                                </p>
+                            }
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="~/images/Welcome.png" alt="Welcome" class="img-fluid welcome-illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="info-card card border-0 bg-light h-100">
+                <div class="card-body text-center p-4">
+                    <img src="~/images/GovernmentPartnership.png" alt="Government" class="mb-3" style="width: 60px; height: 60px;">
+                    <h5 class="text-primary">Government Partnership</h5>
+                    <p class="text-muted small">
+                        Official partnership with South African municipalities to deliver
+                        digital transformation and improved citizen services.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="info-card card border-0 bg-light h-100">
+                <div class="card-body text-center p-4">
+                    <img src="~/images/SecurityShield.png" alt="Security" class="mb-3" style="width: 60px; height: 60px;">
+                    <h5 class="text-success">Secure & Private</h5>
+                    <p class="text-muted small">
+                        Your data is protected with enterprise-grade security measures
+                        and complies with South African data protection regulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="info-card card border-0 bg-light h-100">
+                <div class="card-body text-center p-4">
+                    <img src="~/images/247Support.png" alt="Support" class="mb-3" style="width: 60px; height: 60px;">
+                    <h5 class="text-info">24/7 Support</h5>
+                    <p class="text-muted small">
+                        Round-the-clock technical support and municipal assistance
+                        to ensure your issues are addressed promptly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .upcoming-event-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .upcoming-event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2) !important;
+        }
+</style>

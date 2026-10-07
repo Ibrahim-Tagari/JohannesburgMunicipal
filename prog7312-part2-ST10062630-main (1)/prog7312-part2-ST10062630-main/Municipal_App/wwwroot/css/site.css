@@ -1,0 +1,1449 @@
+/*
+    :root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #059669;
+    --accent-color: #f59e0b;
+    --danger-color: #dc2626;
+    --dark-color: #1f2937;
+    --light-color: #f8fafc;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #374151;
+    background-color: #f9fafb;
+}
+
+.bg-municipal {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+}
+
+.text-municipal {
+    color: var(--primary-color);
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.brand-text .brand-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.brand-text .brand-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin: 0 0.25rem;
+    transition: var(--transition);
+}
+
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-1px);
+    }
+
+.user-info .user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.user-info .user-role {
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.hero-carousel {
+    height: 70vh;
+    min-height: 500px;
+}
+
+.carousel-item {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(30, 58, 138, 0.8), rgba(37, 99, 235, 0.6));
+        z-index: 1;
+    }
+
+.carousel-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.carousel-bg-welcome {
+    background-image: linear-gradient(135deg, var(--primary-color), #3b82f6);
+}
+
+.carousel-bg-community {
+    background-image: linear-gradient(135deg, var(--secondary-color), #10b981);
+}
+
+.carousel-bg-digital {
+    background-image: linear-gradient(135deg, var(--accent-color), #f97316);
+}
+
+.service-card {
+    transition: var(--transition);
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 100%;
+}
+
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+    color: white;
+}
+
+.feature-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.stats-section {
+    background: linear-gradient(135deg, var(--primary-color), #1e40af);
+    color: white;
+    padding: 4rem 0;
+    margin: 4rem 0;
+    border-radius: var(--border-radius);
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    margin-top: 0 !important;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+    .social-links a:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+    }
+
+.contact-item {
+    padding: 0.5rem 0;
+}
+
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.auth-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.auth-header {
+    background: linear-gradient(135deg, var(--primary-color), #2563eb);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-body {
+    padding: 3rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    }
+
+.btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #2563eb);
+    border: none;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #1e40af, #1d4ed8);
+        transform: translateY(-1px);
+    }
+
+.btn-success {
+    background: linear-gradient(135deg, var(--secondary-color), #10b981);
+    border: none;
+}
+
+    .btn-success:hover {
+        background: linear-gradient(135deg, #047857, #059669);
+        transform: translateY(-1px);
+    }
+
+.demo-account-card {
+    border: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+    .demo-account-card:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: var(--box-shadow);
+    }
+
+    .demo-account-card.admin-card {
+        background: linear-gradient(135deg, #fef3c7, #fde68a);
+    }
+
+    .demo-account-card.user-card {
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    }
+
+.about-hero,
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-color), #2563eb);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.contact-icon-sm {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.contact-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+    .contact-item:last-child {
+        border-bottom: none;
+    }
+
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .carousel-content h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-content .lead {
+        font-size: 1rem;
+    }
+
+    .auth-body {
+        padding: 2rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    .navbar-logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-carousel {
+        height: 40vh;
+        min-height: 350px;
+    }
+
+    .carousel-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .auth-body {
+        padding: 1.5rem;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+.btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+    .btn.loading::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -8px;
+        border: 2px solid transparent;
+        border-top-color: currentColor;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000;
+    }
+
+    .btn {
+        border: 2px solid #000;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    */
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Municipal Color Scheme - South African inspired */
+:root {
+    --municipal-primary: #1e3a8a;
+    --municipal-secondary: #059669;
+    --municipal-accent: #d97706;
+    --municipal-warning: #f59e0b;
+    --municipal-danger: #dc2626;
+    --municipal-dark: #1f2937;
+    --municipal-light: #f8fafc;
+}
+
+/* Navigation Styling */
+.bg-municipal {
+    background: linear-gradient(135deg, var(--municipal-primary) 0%, #1e40af 100%) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-logo {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.brand-text .brand-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.brand-text .brand-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+.user-info .user-name {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.user-info .user-role {
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+/* Fixed Navigation Auth Links */
+.nav-auth-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    padding: 0.5rem 1rem !important;
+}
+
+    .nav-auth-link:hover {
+        text-decoration: underline !important;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.nav-register-btn {
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+    .nav-register-btn:hover {
+        border-color: white !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        text-decoration: underline !important;
+    }
+
+/* Carousel Styling */
+.carousel-slide {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Fixed Get Started Button Hover */
+.btn-light {
+    background-color: white !important;
+    color: var(--municipal-primary) !important;
+    border: 2px solid white !important;
+    transition: all 0.3s ease !important;
+}
+
+    .btn-light:hover {
+        background-color: transparent !important;
+        color: white !important;
+        border-color: white !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2) !important;
+    }
+
+/* Fixed Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+    transition: opacity 0.1s ease;
+}
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+    }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    background-size: 100%, 100%;
+}
+
+.carousel-indicators {
+    bottom: 20px;
+}
+
+    .carousel-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        opacity: 0.5;
+        transition: opacity 0.1s ease;
+    }
+
+    .carousel-indicators .active {
+        opacity: 1;
+    }
+
+/* METHOD 4: CSS Background Images for Carousel */
+.carousel-bg-digital {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/digital-transformation-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.carousel-caption-custom {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.municipal-logo {
+    max-width: 250px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.stat-item {
+    text-align: center;
+    color: white;
+    margin: 0 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feature-item {
+    color: white;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    }
+
+.service-icon {
+    position: relative;
+}
+
+.service-icon-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #e9ecef;
+    padding: 15px;
+    background: white;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.service-card:hover .service-icon-img {
+    transform: scale(1.1);
+    border-color: var(--municipal-primary);
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.feature-badge {
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #e9ecef;
+}
+
+/* Admin Dashboard */
+.admin-dashboard-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.admin-icon {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.admin-action-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+    .admin-action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+
+/* Welcome Card */
+.welcome-card {
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.welcome-illustration {
+    max-width: 180px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    object-fit: contain;
+}
+
+.stat-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.admin-badge {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #92400e;
+}
+
+.user-badge {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: #065f46;
+}
+
+/* Info Cards */
+.info-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+/* Section Divider */
+.divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--municipal-primary), var(--municipal-secondary));
+    border-radius: 2px;
+    margin: 1rem auto;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+    border-top: 4px solid var(--municipal-primary);
+}
+
+.footer-logo {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+    .social-links a:hover {
+        background: var(--municipal-primary);
+        transform: translateY(-2px);
+    }
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Custom styles for Municipal Services */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.alert-info {
+    border-left: 4px solid #17a2b8;
+}
+
+.alert-success {
+    border-left: 4px solid #28a745;
+}
+
+.btn-primary {
+    background-color: var(--municipal-primary);
+    border-color: var(--municipal-primary);
+}
+
+    .btn-primary:hover {
+        background-color: #1e40af;
+        border-color: #1e40af;
+    }
+
+.bg-primary {
+    background-color: var(--municipal-primary) !important;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--municipal-primary) 0%, #1e40af 100%) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, var(--municipal-secondary) 0%, #047857 100%) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, var(--municipal-warning) 0%, #d97706 100%) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #dee2e6;
+    }
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -23px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dee2e6;
+    border: 2px solid #fff;
+}
+
+.timeline-item.completed .timeline-marker {
+    background: var(--municipal-secondary);
+}
+
+.timeline-item.active .timeline-marker {
+    background: var(--municipal-primary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(30, 58, 138, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0);
+    }
+}
+
+.timeline-content h6 {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Badge styles */
+.badge {
+    font-size: 0.75em;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-height: 400px;
+    }
+
+    .carousel-caption-custom {
+        padding: 2rem 0;
+    }
+
+    .municipal-logo {
+        max-width: 150px;
+    }
+
+    .stat-item {
+        margin: 0 0.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .feature-list {
+        justify-content: center;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-marker {
+        left: -18px;
+    }
+
+    .brand-text .brand-title {
+        font-size: 1rem;
+    }
+
+    .user-info {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-slide {
+        min-height: 350px;
+    }
+
+    .display-4 {
+        font-size: 1.8rem;
+    }
+
+    .service-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* File input styling */
+input[type="file"] {
+    padding: 0.375rem 0.75rem;
+}
+
+/* Character counter styling */
+#charCount {
+    font-weight: bold;
+    color: var(--municipal-primary);
+}
+
+/* Engagement message styling */
+#engagementMessage {
+    font-weight: 500;
+}
+
+/* Loading animation */
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Status badge colors */
+.bg-success-subtle {
+    background-color: rgba(5, 150, 105, 0.1) !important;
+}
+
+.bg-primary-subtle {
+    background-color: rgba(30, 58, 138, 0.1) !important;
+}
+
+.bg-warning-subtle {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+}
+
+.text-success {
+    color: var(--municipal-secondary) !important;
+}
+
+.text-primary {
+    color: var(--municipal-primary) !important;
+}
+
+.text-warning {
+    color: var(--municipal-warning) !important;
+}
+
+/* Card hover effects */
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Search and filter styling */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--municipal-primary);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+/* Modal enhancements */
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Print styles */
+@media print {
+    .btn,
+    .modal-header button,
+    .card-footer {
+        display: none !important;
+    }
+
+    .card {
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Enhanced Authentication Card Styling - Made Wider */
+.auth-card {
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 500px;
+    max-width: 900px !important; /* Increased from default */
+    margin: 0 auto !important;
+}
+
+    .auth-card .card-header {
+        border-radius: 0;
+        padding: 2rem 1.5rem;
+    }
+
+    .auth-card .card-body {
+        padding: 3rem 4rem !important; /* Increased horizontal padding */
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+
+    .auth-card .form-control-lg {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+
+        .auth-card .form-control-lg:focus {
+            border-color: var(--municipal-primary);
+            box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.15);
+            transform: translateY(-1px);
+        }
+
+    .auth-card .form-select-lg {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+
+        .auth-card .form-select-lg:focus {
+            border-color: var(--municipal-primary);
+            box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.15);
+        }
+
+    .auth-card .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+    }
+
+        .auth-card .btn-lg:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+/* Demo accounts styling */
+.demo-accounts-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.demo-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+    .demo-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .demo-card .card-body {
+        padding: 1.5rem 1rem !important;
+    }
+
+/* Form sections */
+.auth-card h5 {
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card .border-bottom {
+    border-color: #dee2e6 !important;
+    padding-bottom: 0.5rem;
+}
+
+/* Form text improvements */
+.form-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+/* Divider styling */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #dee2e6, transparent);
+}
+
+/* Responsive adjustments for auth forms - Improved */
+@media (max-width: 992px) {
+    .auth-card {
+        max-width: 100% !important;
+        margin: 0 15px !important;
+    }
+
+        .auth-card .card-body {
+            padding: 2.5rem 3rem !important;
+        }
+}
+
+@media (max-width: 768px) {
+    .auth-card .card-body {
+        padding: 2rem 2rem !important;
+    }
+
+    .auth-card .form-control-lg,
+    .auth-card .form-select-lg {
+        font-size: 1rem;
+        padding: 0.875rem 1rem;
+    }
+
+    .auth-card .btn-lg {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .demo-accounts-section {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-card .card-body {
+        padding: 1.5rem 1.5rem !important;
+    }
+
+    .auth-card .card-header {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Container width adjustments for auth pages */
+.auth-container {
+    max-width: 1000px !important; /* Increased container width */
+    margin: 0 auto !important;
+}
+
+/* Loading states */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+    .btn-loading::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        margin: auto;
+        border: 2px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced spacing */
+.g-4 > * {
+    margin-bottom: 1.5rem;
+}
+
+/* Icon enhancements */
+.auth-card .fas {
+    opacity: 0.8;
+}
+
+.auth-card .form-label .fas {
+    opacity: 1;
+}
+
+/* About and Contact Page Styles */
+.about-hero,
+.contact-hero {
+    background: linear-gradient(135deg, var(--municipal-primary), #2563eb);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Contact Page Styles */
+.contact-icon-sm {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.contact-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+    .contact-item:last-child {
+        border-bottom: none;
+    }
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus indicators */
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+    outline: 2px solid var(--municipal-primary);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000;
+    }
+
+    .btn {
+        border: 2px solid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
